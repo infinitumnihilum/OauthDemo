@@ -1,0 +1,64 @@
+security:
+  oauth2:
+    client:
+      client-id: acme
+      client-secret: acmesecret
+      scope: read,write
+      auto-approve-scopes: '.*'
+
+
+facebook:
+  client:
+    clientId: 233668646673605
+    clientSecret: 33b17e044ee6a4fa383f46ec6e28ea1d
+    accessTokenUri: https://graph.facebook.com/oauth/access_token
+    userAuthorizationUri: https://www.facebook.com/dialog/oauth
+    tokenName: oauth_token
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://graph.facebook.com/me
+
+github:
+  client:
+    clientId: bd1c0a783ccdd1c9b9e4
+    clientSecret: 1a9030fbca47a5b2c28e92f19050bb77824b5ad1
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user
+
+fitbit:
+  client:
+    clientId: 227PTL
+    clientSecret: 9eca4c7198b4f28ef6a44fd0212d856f
+    accessTokenUri: https://api.fitbit.com/oauth2/token
+    userAuthorizationUri: https://www.fitbit.com/oauth2/authorize
+    token_type: Bearer
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+    scope: profile settings
+  resource:
+    userInfoUri: https://api.fitbit.com/1/user/-/profile.json
+
+
+google:
+  client:
+    clientId: 185600857335-4rcki38l52cn6g7rkd5jsnrcnveo70mr.apps.googleusercontent.com
+    clientSecret: nsmNuTyQhC-AeKK2Jbq9dnsP
+    accessTokenUri: https://accounts.google.com/o/oauth2/token
+    userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+    tokenName: oauth_token
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+    scope: https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/fitness.activity.read https://www.googleapis.com/auth/fitness.body.read
+  resource:
+    userInfoUri: https://www.googleapis.com/oauth2/v2/userinfo
+
+
+
+logging.level.org.springframework.web: DEBUG
+
+server:
+  port: 8080
